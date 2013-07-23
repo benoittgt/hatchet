@@ -10,3 +10,5 @@ def assert_tests_run
 end
 
 
+puts "============================="
+puts `heroku auth:whoami`
