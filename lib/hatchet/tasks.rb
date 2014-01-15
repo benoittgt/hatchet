@@ -14,7 +14,7 @@ namespace :hatchet do
     [
      "bundle exec hatchet install",
      "echo '#{config_ssh}' >> ~/.ssh/config",
-     "curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 30 https://toolbelt.heroku.com/install-ubuntu.sh | sh",
+     "curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 30 https://raw2.github.com/heroku/toolbelt/schneems/ubuntu-fix/web/views/install-ubuntu.erb | sh",
      "yes | heroku keys:add"
     ].each do |command|
       puts "== Running: #{command}"
